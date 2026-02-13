@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Importation de la police */
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+@theme {
+  /* On définit les variables ici pour la v4 */
+  --font-montserrat: "Montserrat", sans-serif;
+  
+  --color-bg-dark: #121212;
+  --color-bg-second: #202020;
+  --color-main-gold: #b68362;
+  --color-soft-pink: #e1bac5;
+  --color-other-gray: #8b8a91;
+  --color-ann-color: #c7c6d3;
+  --color-alt-color: #4b4b51;
+  
+  --background-image-gold-gradient: linear-gradient(135deg, #e1bac5 0%, #b68362 100%);
+}
+
+/* Tes variables par défaut (Dark Mode) */
+:root {
+  --bg-dark: #121212;
+  --bg-second: #1c1c1c;
+  --text-main: #ffffff;
+  --text-gray: #a0a0a0;
+  --main-gold: #c19a8a;
+  --border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Les variables quand le mode LIGHT est activé */
+html.light {
+  --bg-dark: #f8f9fa;      /* Fond très clair */
+  --bg-second: #ffffff;    /* Cartes blanches */
+  --text-main: #121212;    /* Texte noir */
+  --text-gray: #4b5563;    /* Gris foncé pour la lecture */
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* On applique les variables globalement */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Utilise ces classes dans tes composants Tailwind */
+.bg-bg-dark { background-color: var(--bg-dark); }
+.bg-bg-second { background-color: var(--bg-second); }
+.text-white { color: var(--text-main); }
+.text-other-gray { color: var(--text-gray); }
+
+/* Appliquer le style de base au body */
+body {
+  font-family: var(--font-montserrat);
+  background-color: var(--color-bg-dark);
+  color: white;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optionnel : Ajoute un décalage pour que le menu ne cache pas le titre de la section */
+section {
+  scroll-margin-top: 80px; 
+}
