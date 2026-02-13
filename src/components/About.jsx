@@ -34,8 +34,8 @@ const About = () => {
             <span className="text-white font-bold tracking-widest uppercase">AWS Certified Cloud Practitioner</span>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-            More <span className="underline decoration-main-gold underline-offset-8">About Me</span>
+          <h2 className="text-5xl md:text-5xl font-bold text-white mb-8">
+            More <span className="bg-gold-gradient bg-clip-text text-transparent">About Me</span>
           </h2>
           
           <div className="space-y-6 text-lg">
